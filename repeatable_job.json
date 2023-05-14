@@ -1,0 +1,18 @@
+[
+  {
+    "model": "RepeatableJob",
+    "name": "update_offers",
+    "callable": "core.tasks.update_offers",
+    "callable_args": [],
+    "callable_kwargs": [],
+    "enabled": true,
+    "queue": "default",
+    "repeat": null,
+    "at_front": false,
+    "timeout": null,
+    "result_ttl": null,
+    "scheduled_time": "2023-05-13T16:51:36+00:00",
+    "interval": 1,
+    "interval_unit": "minutes"
+  }
+]
