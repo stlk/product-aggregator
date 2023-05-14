@@ -18,10 +18,11 @@ RUN pipenv install --system --skip-lock
 
 COPY . .
 
-ENV SECRET_KEY=just-for-the-hashids-to-have-seed
+ENV API_BASE_URL=placeholder
+ENV API_REFRESH_TOKEN=placeholder
 RUN python manage.py collectstatic --noinput
 
 
 EXPOSE 8080
 
-CMD ["waitress-serve", "--port", "8080", "stripe_custom_links.wsgi:application"]
+CMD ["waitress-serve", "--port", "8080", "product_aggregator.wsgi:application"]
